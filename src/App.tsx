@@ -1,5 +1,13 @@
+import { TaskCard } from "./components/task-card/TaskCard";
+import { FilterBar } from "./components/filter-bar/FilterBar";
+
 function App() {
-   return <div>this is todo list</div>;
+   return (
+      <>
+         <FilterBar />
+         <TaskCard />
+      </>
+   );
 }
 
 export default App;
