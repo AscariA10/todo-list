@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import type { PayloadAction } from "@reduxjs/toolkit";
+// import type { PayloadAction } from "@reduxjs/toolkit";
 
 const initialState: Array<object> = [
    { id: 0, text: "Learn HTML and CSS", completed: true },
@@ -25,5 +25,5 @@ const tasksSlice = createSlice({
    },
 });
 
-// export const { increment, decrement, incrementByAmount } = tasksSlice.actions;
+export const { addTask, deleteTask, toggleComplete } = tasksSlice.actions;
 export const tasksReducer = tasksSlice.reducer;

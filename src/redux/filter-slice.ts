@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import type { PayloadAction } from "@reduxjs/toolkit";
+// import type { PayloadAction } from "@reduxjs/toolkit";
 
 import { statusFilters } from "./constants";
 
@@ -17,4 +17,5 @@ const filterSlice = createSlice({
    },
 });
 
+export const { setStatusFilter } = filterSlice.actions;
 export const filterReducer = filterSlice.reducer;
