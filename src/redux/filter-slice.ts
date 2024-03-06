@@ -1,9 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 // import type { PayloadAction } from "@reduxjs/toolkit";
 
+import { Ifilter } from "../interfaces/selector-int";
+
 import { statusFilters } from "./constants";
 
-const initialState: object = {
+const initialState: Ifilter = {
    status: statusFilters.all,
 };
 
