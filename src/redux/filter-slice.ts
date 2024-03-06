@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 // import type { PayloadAction } from "@reduxjs/toolkit";
 
-import { Ifilter } from "../interfaces/selector-int";
+import { Ifilter } from "../interfaces/reducer-int";
 
 import { statusFilters } from "./constants";
 
@@ -13,8 +13,8 @@ const filterSlice = createSlice({
    name: "filters",
    initialState,
    reducers: {
-      setStatusFilter: () => {
-         console.log("change of status filter");
+      setStatusFilter: (state, action) => {
+         state.status = action.payload;
       },
    },
 });
