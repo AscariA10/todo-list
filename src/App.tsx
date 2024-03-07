@@ -1,5 +1,8 @@
-import { TaskCard } from "./components/task-card/TaskCard";
-import { FilterBar } from "./components/filter-bar/FilterBar";
+import { Header } from "./components/header/Header";
+import { AppBar } from "./components/app-bar/AppBar";
+
+// import { TaskCard } from "./components/task-card/TaskCard";
+// import { FilterBar } from "./components/filter-bar/FilterBar";
 
 import { useAppSelector } from "./redux/hooks";
 
@@ -11,8 +14,10 @@ function App() {
    console.log(filter);
    return (
       <>
-         <FilterBar />
-         <TaskCard />
+         <Header />
+         <AppBar />
+         {/* <FilterBar />
+         <TaskCard /> */}
       </>
    );
 }
