@@ -1,5 +1,7 @@
 export const COLORS: { [key: string]: string } = {
    MAIN_TEXT: "#173D33",
+   ACCENT: "#97D28B",
+   ACCENT_DARK: "#173D33",
 };
 
 Object.freeze(COLORS);
