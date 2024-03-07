@@ -9,15 +9,17 @@ export const Wrapper = styled.div`
 
 export const FilterButton = styled.button`
    padding: 7px;
-   width: 110px;
+   width: 120px;
    font-size: 20px;
 
    text-transform: capitalize;
-
-   background-color: ${COLORS.ACCENT};
+   background-color: ${props => {
+      return props.color === "true" ? COLORS.ACCENT : "white";
+   }};
    border: none;
    border-radius: 7px;
+   border: 2px solid ${COLORS.ACCENT};
+   &:hover {
+      cursor: pointer;
+   }
 `;
-// last-clild {
-//     background-color: red;
-//  }

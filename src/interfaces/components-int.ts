@@ -1,5 +1,11 @@
+import { Itask } from "./reducer-int";
+
 export interface IchildrenProp {
    children: React.ReactNode;
+}
+
+export interface ItaskProp {
+   task: Itask;
 }
 
 export interface Istatus {
@@ -12,10 +18,9 @@ export interface Istatus {
 //     title: string;
 //  }
 
-//  export interface Ibutton {
-//     title: string;
-//     colorTheme: string;
-//  }
+// export interface Ibutton {
+//    color: string;
+// }
 
 //  export interface IsizeProps extends IChildrenProp {
 //     width: Iwidth;

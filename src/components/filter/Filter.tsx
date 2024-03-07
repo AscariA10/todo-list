@@ -1,25 +1,46 @@
 import { statusFilters } from "../../redux/constants";
+import { useAppSelector, useAppDispatch } from "../../redux/hooks";
+import { setStatusFilter } from "../../redux/filter-slice";
+
 import { Wrapper, FilterButton } from "./Filter.styled";
 
-// import { useAppSelector, useAppDispatch } from "../../redux/hooks";
 // import { addTask, deleteTask, toggleComplete } from "../../redux/tasks-slice";
 // import { getTasks, getStatusFilter } from "../../redux/selectors";
 
 export const Filter: React.FC = () => {
-   // const tasks = useAppSelector(state => state.tasks);
-   // const filter = useAppSelector(state => state.filter.status);
-   // const dispatch = useAppDispatch();
+   const dispatch = useAppDispatch();
+   const filter = useAppSelector(state => state.filter.status);
 
-   // function handleClick(): void {
-   //    dispatch(addTask("my new task for test"));
-   // }
-   console.log(statusFilters);
+   const filterHandler: any = (event: any) => {
+      dispatch(setStatusFilter(event.target.name));
+   };
 
    return (
       <Wrapper>
-         <FilterButton>{statusFilters.all}</FilterButton>
-         <FilterButton>{statusFilters.active}</FilterButton>
-         <FilterButton>{statusFilters.completed}</FilterButton>
+         <FilterButton
+            name={statusFilters.all}
+            type="button"
+            onClick={filterHandler}
+            color={`${filter === statusFilters.all}`}
+         >
+            {statusFilters.all}
+         </FilterButton>
+         <FilterButton
+            name={statusFilters.active}
+            type="button"
+            onClick={filterHandler}
+            color={`${filter === statusFilters.active}`}
+         >
+            {statusFilters.active}
+         </FilterButton>
+         <FilterButton
+            name={statusFilters.completed}
+            type="button"
+            onClick={filterHandler}
+            color={`${filter === statusFilters.completed}`}
+         >
+            {statusFilters.completed}
+         </FilterButton>
       </Wrapper>
    );
 };
