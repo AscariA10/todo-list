@@ -1,15 +1,24 @@
 import { Icon } from "@iconify/react";
 import { ItaskProp } from "../../interfaces/components-int";
+
 import { useAppDispatch } from "../../redux/hooks";
+import { deleteTask, toggleComplete } from "../../redux/tasks-slice";
+
+import { Card, CheckBox, CardButton } from "./TaskCard.styled";
 
 export const TaskCard: React.FC<ItaskProp> = ({ task }: ItaskProp) => {
+   const dispatch = useAppDispatch();
+
+   const handleToggle = () => dispatch(toggleComplete(task.id));
+   const handleDelete = () => dispatch(deleteTask(task.id));
+
    return (
-      <div>
-         <input type="checkbox" checked={task.completed} />
+      <Card>
+         <CheckBox type="checkbox" onChange={handleToggle} checked={task.completed} />
          <p>{task.text}</p>
-         <button type="button">
-            <Icon icon="streamline:delete-1" width="12" height="12" />
-         </button>
-      </div>
+         <CardButton type="button" onClick={handleDelete}>
+            <Icon icon="ant-design:delete-filled" width="20" height="20" />
+         </CardButton>
+      </Card>
    );
 };

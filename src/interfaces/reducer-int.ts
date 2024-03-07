@@ -10,6 +10,8 @@ export interface Itask {
    completed: boolean;
 }
 
-// export interface ItaskPayload {
-//    payload: Itask;
-// }
+export interface IfilterStatus {
+   all: "all";
+   active: "active";
+   completed: "completed";
+}
