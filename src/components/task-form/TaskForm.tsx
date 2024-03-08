@@ -20,7 +20,6 @@ export const TaskForm = () => {
    };
 
    const handleChange = (e: React.FormEvent<HTMLInputElement>): void => {
-      // console.log(e.currentTarget.value);
       setInputValue(e.currentTarget.value);
    };
 
@@ -31,7 +30,7 @@ export const TaskForm = () => {
                <Input
                   type="text"
                   name="newTask"
-                  placeholder="Enter task text..."
+                  placeholder="Enter your task..."
                   maxLength={100}
                   onChange={handleChange}
                   value={inputValue}

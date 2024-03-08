@@ -1,4 +1,4 @@
-import { Itask, IfilterStatus } from "../interfaces/reducer-int";
+import { Itask } from "../interfaces/reducer-int";
 import { statusFilters } from "../redux/constants";
 
 export const getVisibleTasks = (tasks: Array<Itask>, statusFilter: string): Array<Itask> => {

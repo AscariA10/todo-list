@@ -1,6 +1,5 @@
 import { nanoid } from "nanoid";
 import { createSlice } from "@reduxjs/toolkit";
-// import type { PayloadAction } from "@reduxjs/toolkit";
 
 import { Itask } from "../interfaces/reducer-int";
 

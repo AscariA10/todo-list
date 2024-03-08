@@ -4,7 +4,7 @@ import { ItaskProp } from "../../interfaces/components-int";
 import { useAppDispatch } from "../../redux/hooks";
 import { deleteTask, toggleComplete } from "../../redux/tasks-slice";
 
-import { Card, CheckBox, CardButton } from "./TaskCard.styled";
+import { Card, CheckBox, CardButton, TaskText } from "./TaskCard.styled";
 
 export const TaskCard: React.FC<ItaskProp> = ({ task }: ItaskProp) => {
    const dispatch = useAppDispatch();
@@ -15,9 +15,9 @@ export const TaskCard: React.FC<ItaskProp> = ({ task }: ItaskProp) => {
    return (
       <Card>
          <CheckBox type="checkbox" onChange={handleToggle} checked={task.completed} />
-         <p>{task.text}</p>
+         <TaskText>{task.text}</TaskText>
          <CardButton type="button" onClick={handleDelete}>
-            <Icon icon="ant-design:delete-filled" width="20" height="20" />
+            <Icon icon="ant-design:delete-filled" width="25" height="25" />
          </CardButton>
       </Card>
    );

@@ -1,5 +1,4 @@
 import { useAppSelector } from "../../redux/hooks";
-import { getStatusFilter } from "../../redux/selectors";
 
 import { getVisibleTasks } from "../../helpers/getVisibleTasks";
 

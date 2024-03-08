@@ -7,12 +7,21 @@ export const Card = styled.div`
    padding: 5px;
 
    border-bottom: 2px dashed ${COLORS.ACCENT};
+   @media screen and (min-width: 768px) {
+      padding: 10px;
+   }
 `;
 
 export const CheckBox = styled.input`
    width: 20px;
    height: 20px;
    margin-right: 15px;
+`;
+
+export const TaskText = styled.p`
+   @media screen and (min-width: 768px) {
+      font-size: 25px;
+   }
 `;
 
 export const CardButton = styled.button`

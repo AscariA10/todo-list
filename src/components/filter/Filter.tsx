@@ -4,9 +4,6 @@ import { setStatusFilter } from "../../redux/filter-slice";
 
 import { Wrapper, FilterButton } from "./Filter.styled";
 
-// import { addTask, deleteTask, toggleComplete } from "../../redux/tasks-slice";
-// import { getTasks, getStatusFilter } from "../../redux/selectors";
-
 export const Filter: React.FC = () => {
    const dispatch = useAppDispatch();
    const filter = useAppSelector(state => state.filter.status);
